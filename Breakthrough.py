@@ -234,6 +234,7 @@ class Game(object):
 
             self._recordResult(self.board)
             self._resetBoard(self.board)
+        print("Player 1 number of Wins: {0}, Loses: {1}".format(self.Player1.wins, self.Player1.loses))
 
     def _recordResult(self, board):
         if self.board.check_if_result() == 'win':
@@ -249,4 +250,4 @@ class Game(object):
 
 if __name__ == '__main__':
     g = Game(Random_Agent(), Random_Agent())
-    g.Play(20)
+    g.Play(1000)
